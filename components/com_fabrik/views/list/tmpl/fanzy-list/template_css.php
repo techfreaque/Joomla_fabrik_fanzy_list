@@ -2,6 +2,10 @@
 /**
  * Fabrik List Template: Div CSS
  *
+ * modified by
+ * max@netsepp.at
+ *
+ * based on work from
  * @package     Joomla
  * @subpackage  Fabrik
  * @copyright   Copyright (C) 2005-2015 fabrikar.com - All rights reserved.
@@ -13,8 +17,6 @@ $c = $_REQUEST['c'];
 $buttonCount = (int) $_REQUEST['buttoncount'];
 $buttonTotal = $buttonCount === 0 ? '100%' : 30 * $buttonCount ."px";
 echo "
-
-
 
 /** Hide the checkbox in each record*/
 
@@ -57,30 +59,45 @@ echo "
     column-gap: 20px;
 }
 
+.well.span12 {
+	padding: 0;
+}
 
 .groupdataMsg {
 	width: 100%;
 }
 
 .fabrik_groupdata .row-fluid {
-    page-break-inside: avoid;           /* Theoretically FF 20+ */
-    break-inside: avoid-column;         /* IE 11 */
+    page-break-inside: avoid;
+    break-inside: avoid-column;
     display:table; 
- }
- @media (max-width: 1000px) {
+}
+ 
+.fabrik_row.row-striped > .row-fluid {
+	padding: 0;
+	margin: 0;
+	}
+ 
+ 
+ 
+ 
+@media (max-width: 1000px) {
 
-.fabrik_groupdata {
+	.fabrik_groupdata {
 	-moz-column-count: 2;
 	-webkit-column-count: 2;
 	column-count: 2;
 	}
-}
+}	
+
  @media (max-width: 800px) {
 
-.fabrik_groupdata {
+	.fabrik_groupdata {
 	-moz-column-count: 1;
 	-webkit-column-count: 1;
 	column-count: 1;
 	}
 }
+
+
 ";?>
