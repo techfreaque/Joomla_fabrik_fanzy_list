@@ -23,6 +23,26 @@ echo "
 #listform_$c .fabrikList input[type=checkbox] {
 	display: none;
 }
+
+#listform_$c .fabrik_actions .fabrik_view {
+	display:none
+} 
+
+#listform_2_com_fabrik_2 .fabrik_action {
+
+    top: 5px!important;
+    right: 5px!important;
+}
+
+.nav.nav-pills.pull-left {
+	float: none;
+}
+
+.fabrikFilterContainer > .row-fluid > .span6 {
+    width: 100%;
+    display: contents;
+}
+
 #listform_$c .well {
 	position: relative;
 }
@@ -50,9 +70,10 @@ echo "
 .fabrikNav {
 
     width: 100%;
+
 }
 
-.fabrik_groupdata {
+.fabrikDataContainer > .fabrikList {
     -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3;
@@ -60,7 +81,14 @@ echo "
 }
 
 .well.span12 {
-	padding: 0;
+	padding: 0!important;
+	border: none;
+	width: 100%;
+	page-break-inside: avoid;
+   display: table;
+   margin: auto 0 20px 0;
+
+}
 }
 
 .groupdataMsg {
@@ -78,12 +106,14 @@ echo "
 	margin: 0;
 	}
  
- 
+ .row-fluid::before, .row-fluid::after {
+    content: unset!important;
+}
  
  
 @media (max-width: 1000px) {
 
-	.fabrik_groupdata {
+	.fabrikDataContainer > .fabrikList, .fabrik_groupdata {
 	-moz-column-count: 2;
 	-webkit-column-count: 2;
 	column-count: 2;
@@ -92,7 +122,7 @@ echo "
 
  @media (max-width: 800px) {
 
-	.fabrik_groupdata {
+	.fabrik_list < .well.span12, .fabrik_groupdata < .row-fluid {
 	-moz-column-count: 1;
 	-webkit-column-count: 1;
 	column-count: 1;
