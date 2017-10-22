@@ -57,6 +57,7 @@ echo "
 	display: inline-block;
 	vertical-align: top;
 }
+
 .fabrikNav {
     float: inline-start;
 }
@@ -68,9 +69,7 @@ echo "
 
 
 .fabrikNav {
-
     width: 100%;
-
 }
 
 .fabrikDataContainer > .fabrikList {
@@ -85,10 +84,8 @@ echo "
 	border: none;
 	width: 100%;
 	page-break-inside: avoid;
-   display: table;
-   margin: auto 0 20px 0;
-
-}
+	display: table;
+	margin: auto 0 20px 0;
 }
 
 .groupdataMsg {
@@ -96,9 +93,9 @@ echo "
 }
 
 .fabrik_groupdata .row-fluid {
-    page-break-inside: avoid;
-    break-inside: avoid-column;
-    display:table; 
+	page-break-inside: avoid;
+	break-inside: avoid-column;
+	display:table; 
 }
  
 .fabrik_row.row-striped > .row-fluid {
